@@ -28,7 +28,7 @@
     {
       "mrkdwn_in": [ "text", "pretext" ],
       "pretext": "Please indicate the urgnecy of your request:",
-      "text": ":red_circle: this is an urgent issue that needs a quick response, currently on woth the customer.\n :large_blue_circle: This is not so urgent but does need a response.\n :eyes: Please add this reaction if your are reviewing or assisting.\n :white_check_mark:, Pleae add this reaction once actionable response is received. Otherwise, it's still pending.\n"
+      "text": ":red_circle: this is an urgent issue that needs a quick response, currently on with the customer.\n :large_blue_circle: This is not so urgent but does need a response.\n :eyes: Please add this reaction if your are reviewing or assisting.\n :white_check_mark:, Pleae add this reaction once actionable response is received.\n"
     },
     {
       "mrkdwn_in": [ "text", "pretext" ],
