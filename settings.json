@@ -10,11 +10,6 @@
     "emojis": [ "red_circle" ]
   },
 
-  "review": {
-    "title": "There are `{{count}}` request(s) being looked :eyes: at in {{channel}}:",
-    "emojis": [ "eyes" ]
-  },
-
   "addressed": {
     "title": "There are `{{count}}` request(s) addressed in {{channel}}:",
     "emojis": [ "white_check_mark" ]
