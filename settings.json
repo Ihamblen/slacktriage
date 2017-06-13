@@ -6,8 +6,8 @@
   "display": [ "pending", "review" ],
   
   "pending": {
-    "title": "There are `{{count}}` urgent request(s) pending in {{channel}}:",
-    "emojis": [ "red_circle" ]
+    "title": "There are `{{count}}` request(s) pending in {{channel}}:",
+    "emojis": [ "large_blue_circle" ]
   },
 
   "review": {
