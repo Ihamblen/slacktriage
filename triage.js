@@ -35,11 +35,13 @@ function getRequest(settings, message) {
   let test = new RegExp(settings.pending.emojis.join('|'));
   let match = message.text.match(test);
   let emoji = match ? match[0] : null;
+  
 
   // flags based on reactions
   let reactions = (message.reactions || []).map(r => r.name);
   let addressed = settings.addressed.emojis.some(e => reactions.includes(e));
-
+  let pending = emoji && !review && !addressed;
+  
   let id = message.ts.replace('.', '');                       // deep link id
   let bot = message.subtype === 'bot_message';                // bot posts
   let priority = settings.pending.emojis.indexOf(emoji);      // display order
