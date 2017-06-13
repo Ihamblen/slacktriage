@@ -40,7 +40,7 @@ function getRequest(settings, message) {
   // flags based on reactions
   let reactions = (message.reactions || []).map(r => r.name);
   let addressed = settings.addressed.emojis.some(e => reactions.includes(e));
-  let pending = emoji && !review && !addressed;
+  let pending = emoji && !addressed;
   
   let id = message.ts.replace('.', '');                       // deep link id
   let bot = message.subtype === 'bot_message';                // bot posts
