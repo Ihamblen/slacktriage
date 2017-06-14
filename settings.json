@@ -12,7 +12,7 @@
 
   "review": {
     "title": "There are `{{count}}` request(s) being looked :eyes: at in {{channel}}:",
-    "emojis": [ "eyes" ]
+    "emojis": [ ]
   },
 
   "addressed": {
