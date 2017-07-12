@@ -33,8 +33,8 @@ function create(payload, messages, options) {
 function getRequest(settings, message) {
   // the emoji that was matched
   let test = new RegExp(settings.pending.emojis.join('|'));
-  let match = message.text.match(test);
-  let emoji = match != null ? match[0] : null;
+  let match = typeof message !== 'undefined' && typeof message.text !== 'undefined' ? message.text.match(test) : null;
+  let emoji = match ? match[0] : null;
 
   // flags based on reactions
   let reactions = (message.reactions || []).map(r => r.name);
