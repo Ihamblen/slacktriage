@@ -24,7 +24,7 @@ function handleCommand(payload) {
   let {channel_id, response_url} = payload;
 
   // load channel history
-  let params = qs.stringify({ count: 500, token: TOKEN, channel: channel_id });
+  let params = qs.stringify({ count: 200, token: TOKEN, channel: channel_id });
   let getHistory = axios.post('https://slack.com/api/channels.history', params);
 
   // build the triage report
