@@ -34,7 +34,7 @@ function getRequest(settings, message) {
   // the emoji that was matched
   let test = new RegExp(settings.pending.emojis.join('|'));
   let match = message.text.match(test);
-  let emoji = match == null ? match[0] : null;
+  let emoji = match != null ? match[0] : null;
 
   // flags based on reactions
   let reactions = (message.reactions || []).map(r => r.name);
