@@ -38,15 +38,18 @@ function getRequest(settings, message) {
 
   // flags based on reactions
   let reactions = (message.reactions || []).map(r => r.name);
+  let commentReactions = (message.comments.reactions || []).map(r => r.name);
   let addressed = settings.addressed.emojis.some(e => reactions.includes(e));
-  let review = settings.review.emojis.some(e => reactions.includes(e)) && !addressed; 
+  let addressedComments = settings.addressed.emojis.some(e => commentReactions.includes(e));
+  
+  let review = settings.review.emojis.some(e => reactions.includes(e)) && !addressed && !addressedComments; 
   let pending = emoji && !review && !addressed;
 
   let id = message.ts.replace('.', '');                       // deep link id
   let bot = message.subtype === 'bot_message';                // bot posts
   let priority = settings.pending.emojis.indexOf(emoji);      // display order
 
-  return { bot, priority, emoji, review, addressed, pending, id, message };
+  return { bot, priority, emoji, review, addressed, addressedComments, pending, id, message };
 }
 
 
