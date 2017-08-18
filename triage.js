@@ -36,7 +36,8 @@ function getRequest(settings, message) {
   let test = new RegExp(settings.pending.emojis.join('|'));
   let match = typeof message !== 'undefined' && typeof message.text !== 'undefined' ? message.text.match(test) : null;
   let emoji = match ? match[0] : null;
-  alert(message.text);
+  //alert(message.text);
+  console.log(message.text);
   // flags based on reactions
   let reactions = (message.reactions || []).map(r => r.name);
   let commentReactions = (message.comment.reactions || []).map(r => r.name);
