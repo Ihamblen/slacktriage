@@ -40,7 +40,7 @@ function getRequest(settings, message) {
   console.log(message.text);
   // flags based on reactions
   let reactions = (message.reactions || []).map(r => r.name);
-  let commentReactions = (message.reactions || []).map(r => r.name);
+  let commentReactions = (message.comment || []).map(r => r.name);
   let addressed = settings.addressed.emojis.some(e => reactions.includes(e));
   let addressedComments = settings.addressed.emojis.some(e => commentReactions.includes(e));
   
