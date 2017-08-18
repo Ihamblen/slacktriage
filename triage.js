@@ -41,7 +41,7 @@ function getRequest(settings, message) {
   // flags based on reactions
   let reactions = (message.reactions || []).map(r => r.name);
   
-  let commentReactions = (message.comment).map(r2 => r2.name);
+  let commentReactions = (message.comment || []).map(r2 => r2.name);
   let addressed = settings.addressed.emojis.some(e => reactions.includes(e));
   let addressedComments = settings.addressed.emojis.some(e => commentReactions.includes(e));
   
