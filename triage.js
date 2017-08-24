@@ -104,6 +104,7 @@ function buildSection(settings, requests, payload, name) {
   text = text.replace(/{{channel}}/g, `<#${channel_id}|${channel_name}>`);
   if(text.indexOf(":white_check_mark:") !== -1){
   return text;}
+}
 
 
 module.exports = create;
