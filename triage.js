@@ -100,8 +100,9 @@ function buildSection(settings, requests, payload, name) {
   let text = [title].concat(items).join('\n');                      // combined text
 
   // replace template fields
-  /*text = text.replace(/{{count}}/g, filtered.length);*/
+  text = text.replace(/{{count}}/g, filtered.length);*/
   text = text.replace(/{{channel}}/g, `<#${channel_id}|${channel_name}>`);
+  if(string.indexOf(":white_check_mark;")<0     
 
   return text;
 }
