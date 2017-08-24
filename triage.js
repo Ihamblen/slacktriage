@@ -102,9 +102,9 @@ function buildSection(settings, requests, payload, name) {
   // replace template fields
   text = text.replace(/{{count}}/g, filtered.length);*/
   text = text.replace(/{{channel}}/g, `<#${channel_id}|${channel_name}>`);
-  if(text.indexOf(":white_check_mark;")<0 
+  if(text.indexOf(":white_check_mark;")<0{
 
-  return text;
+  return text;}
 }
 
 
