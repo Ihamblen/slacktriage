@@ -100,7 +100,7 @@ function buildSection(settings, requests, payload, name) {
   let text = [title].concat(items).join('\n');                      // combined text
 
   // replace template fields
-  text = text.replace(/{{count}}/g, filtered.length);*/
+  text = text.replace(/{{count}}/g, filtered.length);
   text = text.replace(/{{channel}}/g, `<#${channel_id}|${channel_name}>`);
   
   return text;}
