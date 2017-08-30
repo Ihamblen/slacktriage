@@ -41,9 +41,9 @@ function getRequest(settings, message) {
   // flags based on reactions
   let reactions = (message.reactions || []).map(r => r.name);
   
- // let commentReactions = (message.comment || []).map(r2 => r2.id);
+  let commentReactions = (message.comment || []).map(r2 => r2.id);
   let addressed = settings.addressed.emojis.some(e => reactions.includes(e));
-  //let addressedComments = settings.addressed.emojis.some(e => commentReactions.includes(e));
+  let addressedComments = settings.addressed.emojis.some(e => commentReactions.includes(e));
   
   let review = settings.review.emojis.some(e => reactions.includes(e)) && !addressed && !addressedComments; 
   let pending = emoji && !review && !addressed;
