@@ -43,7 +43,7 @@ function getRequest(settings, message) {
   
  // let commentReactions = (message.comment || []).map(r2 => r2.id);
   let addressed = settings.addressed.emojis.some(e => reactions.includes(e));
-  let addressedComments = settings.addressed.emojis.some(e => commentReactions.includes(e));
+  //let addressedComments = settings.addressed.emojis.some(e => commentReactions.includes(e));
   
   let review = settings.review.emojis.some(e => reactions.includes(e)) && !addressed && !addressedComments; 
   let pending = emoji && !review && !addressed;
